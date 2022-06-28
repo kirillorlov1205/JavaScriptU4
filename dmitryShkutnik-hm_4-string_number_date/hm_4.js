@@ -9,4 +9,4 @@
 //Дана строка 'я учу typescript!'. Вырежите из нее слово 'учу' и слово 'typescript' разными способами (через substring, slice).
 var testString = 'я учу typescript!';
 console.log(testString.substring(0, 1));
-console.log(testString.slice(0, -15));
+console.log(testString.slice(0, 1));
