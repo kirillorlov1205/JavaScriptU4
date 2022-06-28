@@ -17,5 +17,5 @@
 
 let testString: string = 'я учу typescript!'
 console.log(testString.substring(0,1));
-console.log(testString.slice(0,-15));
+console.log(testString.slice(0,1));
  
