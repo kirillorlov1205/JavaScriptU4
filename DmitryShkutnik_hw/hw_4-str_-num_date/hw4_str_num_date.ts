@@ -151,3 +151,13 @@ let maxRange : number = Math.floor(20.1);
 let rs : number = Math.floor(Math.random() * (maxRange-minRange))+minRange;
 
 console.log(rs);
+
+
+
+// Task 15 💻
+// Реализовать метод получения рандомного числа с плавающей точкой в заданном диапазоне. Диапазон задается аргументами фунции
+
+let minRange15 : number = Math.ceil(1);
+let maxRange15 : number = Math.floor(5);
+let result15 : number = Math.random() * (maxRange15-minRange15) + minRange15;
+console.log(result15);

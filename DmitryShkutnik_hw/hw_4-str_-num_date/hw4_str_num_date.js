@@ -45,8 +45,8 @@ console.log(testStr5.slice(0, 1));
 //Task 6 💻
 //Дана строка 'я учу typescript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.
 var testStr6 = 'Я Учу Typescript';
-let varArray = testStr6.split(' ')
-console.log(varArray);
+var varArray = testStr6.split(' ');
+console.log(testStr6.split(' '));
 //Task 7 💻
 //Дана строка ' я учу typescript! '. Выведите строку, без начальных и пробелов в конце строки.
 var testStr7 = ' я учу typescript! ';
@@ -62,7 +62,7 @@ if (Number.isInteger(varNum2)) {
     console.log(varNum2);
 }
 else {
-   console.log(Math.round(varNum2));
+    console.log(Math.round(varNum2));
 }
 //Task 10 💻
 //Дано произвольное число с плавающей точкой. Реализовать методы округления данного числа до ближайшего меньшего, большего аргумента и ближайшего целого числа.
@@ -91,3 +91,9 @@ var minRange = Math.ceil(11.5);
 var maxRange = Math.floor(20.1);
 var rs = Math.floor(Math.random() * (maxRange - minRange)) + minRange;
 console.log(rs);
+// Task 15 💻
+// Реализовать метод получения рандомного числа с плавающей точкой в заданном диапазоне. Диапазон задается аргументами фунции
+var minRange15 = Math.ceil(1);
+var maxRange15 = Math.floor(5);
+var result15 = Math.random() * (maxRange15 - minRange15) + minRange15;
+console.log(result15);
