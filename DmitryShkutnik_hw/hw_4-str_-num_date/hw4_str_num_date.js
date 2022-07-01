@@ -10,7 +10,7 @@ console.log(lowCase.repeat(5), UppCase.repeat(5));
 //Дана строка 'я учу typescript!'. Проверить, есть ли данное слово в строке: если есть - вывести позицию подстроки 'учу', если нет - вывести строку Данной подстроки нет
 var testStr2 = 'я учу typescript!';
 if (testStr2.includes('учу')) {
-    console.log('учу');
+    console.log(testStr2.indexOf('учу'));
 }
 else {
     console.log('Данной подстроки нет');
