@@ -21,7 +21,7 @@ console.log(lowCase.repeat(5), UppCase.repeat(5))
 let testStr2: string = 'я учу typescript!';
 
 if (testStr2.includes('учу')) {
-    console.log ('учу');
+    console.log(testStr2.indexOf('учу'))
 } else {
     console.log('Данной подстроки нет');
     
@@ -71,6 +71,7 @@ console.log(testStr5.slice(0,1));
 //Task 6 💻
 //Дана строка 'я учу typescript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.
 let testStr6: string = 'Я Учу Typescript'
+let varArray: any = testStr6.split(' ')
 console.log(testStr6.split (' '));
 
 
@@ -95,7 +96,7 @@ let varNum2: number = 5.99
 if(Number.isInteger(varNum2)) {
 console.log(varNum2);
 } else {
-console.log(Number.isInteger(varNum2));
+console.log(Math.round(varNum2));
 }
 
 
