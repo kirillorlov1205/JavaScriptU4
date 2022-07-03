@@ -97,3 +97,63 @@ var minRange15 = Math.ceil(1);
 var maxRange15 = Math.floor(5);
 var result15 = Math.random() * (maxRange15 - minRange15) + minRange15;
 console.log(result15);
+// Task 16 💻
+// Выведите дату сегоднешнего дня в формате: "текущая дата: месяц/год/день. Текущее время часы:минуты:секунды.". Использовать только внутренние методы Date.
+var date = new Date();
+var monthArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // Использовал такое решение, потому что по умолчанию при использовании метода .getMonth в консоли выдавал 6-й месяц. Так как месяца индексируется не с 1, а с 0.В итоге создал массив из 12 чисел, который присвоен каждому месяцу.
+var month = monthArr[date.getMonth()];
+var year = date.getFullYear();
+var currentDate = date.getDate();
+var hours = date.getHours();
+var minut = date.getMinutes();
+var sec = date.getSeconds();
+console.log("\u0422\u0435\u043A\u0443\u0449\u0430\u044F \u0434\u0430\u0442\u0430: ".concat(month, "/").concat(year, "/").concat(currentDate));
+console.log("\u0422\u0435\u043A\u0443\u0449\u0435\u0435 \u0432\u0440\u0435\u043C\u044F: ".concat(hours, ":").concat(minut, ":").concat(sec));
+//_ Task 1 _ Чему равно выражение?
+// 1 + 2 + false + 10 * "hello"             // стринг "hello" приравнивается к NaN. Ответ: NaN
+// 100 - "100px"                            // при данной операции стринга приравнивается к NaN. Ответ: NaN
+// 100 - Number.parseFloat("10.5px")        // метод parseFloat распарсит стрингу в число. Ответ: 89.5
+// false + 0 / 10                           // false приравнивается к 0. Ответ: 0
+// 44 / 0 + 55                              // деление на 0 - бесконечность. Ответ: infinity
+// undefined + "undefined" + null + "null"  // undefined и null преобразуется в строки, т.к. у нас уже есть строковые данные. Далее конкатенация строк. Ответ: 'undefinedundefinednullnull'
+// undefined - "undefined"                  // undefined преобразуется в NaN. Т.к. вычетание, то "undefined" преобразуется к число, получаем NaN. Ответ: NaN
+// undefined + null - false                 // undefined преобразуется в NaN. Могу предположить, что null и false приравнивается к 0. Ответ: 0
+// _ Task 2 _ Задачи на циклы и методы
+// есть строка любого размера. Вывести ASCII код каждой буквы этой строки (charCodeAt)
+var str = 'test';
+for (var i = 0; i < str.length; i++) {
+    var res = str.charCodeAt(i);
+    console.log(res);
+}
+// Вывести числа от 100, до 0
+function funct() {
+    for (var i = 100; i >= 0; i--) {
+        console.log(i);
+    }
+}
+console.log(funct());
+// есть строка слов, разделённых запятой. Увеличить первую букву каждого слова
+var strUp = 'dmitry, kirill, vadim, ilya saf';
+function strFunct() {
+    var splitArr = strUp.split(' ');
+    var strUpRes = ' ';
+    for (var i = 0; i < splitArr.length; i++) {
+        var name_1 = splitArr[i];
+        var first = name_1.substring(0, 1).toLocaleUpperCase();
+        var leftover = name_1.substring(1, name_1.length);
+        strUpRes = strUpRes + first + leftover + ' ';
+    }
+    return strUpRes;
+}
+console.log(strFunct());
+// Есть строка 'hello' сделать её 'olleh' (без использования reverse)
+var strExmpl = 'hello';
+function reversStr() {
+    if (strExmpl === '') {
+        return '';
+    }
+    else {
+        return (strExmpl.substring(1)) + strExmpl.charAt(0);
+    }
+}
+console.log(reversStr());
