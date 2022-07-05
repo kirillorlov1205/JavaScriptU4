@@ -1,0 +1,33 @@
+-- Staged/Unstaged
+git add .\lesson1\setup.txt - make particular file staged
+git add . = make all files ctaged
+git restore --staged .lesson1\setup.txt - to unstaged 
+
+-- branch
+git branch - check branchs and current branch
+git branch HDR-1205 - create branch 'HDR-1205'
+git branch -D HDR-1205 - delete branch HDR-1205
+git checkout -B MyBranch - create branch MyBranch and switch ot it
+
+-- commit
+git commit -m "**" - add commit with name **
+
+-- checkout
+git checkout master - go to the branch with name master
+git checkout 855497afa515e2b84ab87dcecad257c27d69c231 - go to the version of the branch on (commit)
+
+-- merge
+git merge HDR-1111 - merge branch HDR-1111 in current branch
+
+-- remote
+git remote -v - check remote repos
+git remote add jsMyRepo https:\\
+git push origin main - push branch main in repo jsMyRepo
+git pull origin main - add actual remote repo
+
+-- setup remote repo
+git remote add origin https://github.com/kirillorlov1205/JavaScriptLearn.git - add remote repo origin
+git branch -m main - create a branch main
+git push origin main - send branch main to repo origin
+or
+git clone https://github.com/kirillorlov1205/JavaScriptU4.git - clone repo
