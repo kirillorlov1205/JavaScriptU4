@@ -151,3 +151,112 @@ let maxRange : number = Math.floor(20.1);
 let rs : number = Math.floor(Math.random() * (maxRange-minRange))+minRange;
 
 console.log(rs);
+
+
+
+// Task 15 💻
+// Реализовать метод получения рандомного числа с плавающей точкой в заданном диапазоне. Диапазон задается аргументами фунции
+
+let minRange15 : number = Math.ceil(1);
+let maxRange15 : number = Math.floor(5);
+let result15 : number = Math.random() * (maxRange15-minRange15) + minRange15;
+console.log(result15);
+
+
+
+// Task 16 💻
+// Выведите дату сегоднешнего дня в формате: "текущая дата: месяц/год/день. Текущее время часы:минуты:секунды.". Использовать только внутренние методы Date.
+
+
+let date : Date = new Date();
+
+let monthArr : any  = [1,2,3,4,5,6,7,8,9,10,11,12] // Использовал такое решение, потому что по умолчанию при использовании метода .getMonth в консоли выдавал 6-й месяц. Так как месяца индексируется не с 1, а с 0.В итоге создал массив из 12 чисел, который присвоен каждому месяцу.
+let month : any = monthArr[date.getMonth()];
+
+let year : any = date.getFullYear();
+let currentDate : any = date.getDate();
+
+let hours : any = date.getHours();
+let minut : any = date.getMinutes();
+let sec : any = date.getSeconds();
+
+console.log(`Текущая дата: ${month}/${year}/${currentDate}`);
+console.log(`Текущее время: ${hours}:${minut}:${sec}`); 
+
+
+//_ Task 1 _ Чему равно выражение?
+// 1 + 2 + false + 10 * "hello"             // стринг "hello" приравнивается к NaN. Ответ: NaN
+// 100 - "100px"                            // при данной операции стринга приравнивается к NaN. Ответ: NaN
+// 100 - Number.parseFloat("10.5px")        // метод parseFloat распарсит стрингу в число. Ответ: 89.5
+// false + 0 / 10                           // false приравнивается к 0. Ответ: 0
+// 44 / 0 + 55                              // деление на 0 - бесконечность. Ответ: infinity
+// undefined + "undefined" + null + "null"  // undefined и null преобразуется в строки, т.к. у нас уже есть строковые данные. Далее конкатенация строк. Ответ: 'undefinedundefinednullnull'
+// undefined - "undefined"                  // undefined преобразуется в NaN. Т.к. вычетание, то "undefined" преобразуется к число, получаем NaN. Ответ: NaN
+// undefined + null - false                 // undefined преобразуется в NaN. Могу предположить, что null и false приравнивается к 0. Ответ: 0
+
+
+
+
+
+
+
+// _ Task 2 _ Задачи на циклы и методы
+
+// есть строка любого размера. Вывести ASCII код каждой буквы этой строки (charCodeAt)
+let str : string = 'test';
+
+for (let i=0; i<str.length; i++) {
+    let res = str.charCodeAt(i);
+    console.log(res);
+}
+
+ 
+
+
+// Вывести числа от 100, до 0
+function funct() {
+    
+    for (let i=100; i>=0; i--) {
+    console.log(i);
+ }
+}
+console.log(funct());
+
+
+
+
+ // есть строка слов, разделённых запятой. Увеличить первую букву каждого слова
+ let strUp : string = 'dmitry, kirill, vadim, ilya saf';
+
+ function strFunct () {
+
+    let splitArr: any = strUp.split(' ');
+    let strUpRes: any = ' ';
+
+    for (let i = 0; i < splitArr.length; i++){
+        let name: any = splitArr[i];
+        let first: any = name.substring(0,1).toLocaleUpperCase();
+        let leftover: any = name.substring(1, name.length);
+        strUpRes = strUpRes + first + leftover + ' ';
+    }
+    return strUpRes
+ }
+
+ console.log(strFunct());
+
+
+
+ 
+// Есть строка 'hello' сделать её 'olleh' (без использования reverse)
+let strExmpl: string = 'hello';
+
+function reversStr () {
+    if (strExmpl === ''){
+    return '';
+    }
+    else {
+    return (strExmpl.substring(1))+ strExmpl.charAt(0);
+    }
+}
+
+console.log(reversStr());
